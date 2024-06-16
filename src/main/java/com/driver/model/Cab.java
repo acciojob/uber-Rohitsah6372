@@ -23,7 +23,7 @@ public class Cab {
 
     String cabType;
 
-    int distKm;
+    int rateKm;
 
     boolean avialable;
 

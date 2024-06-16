@@ -19,16 +19,9 @@ public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-
-    String name;
-
-    int number;
-
-
+    String number;
     Boolean avialable;
-
-    @Column(nullable = false, unique = true)
-    String email;
+    String password;
 
     @OneToOne
     Cab cab;
