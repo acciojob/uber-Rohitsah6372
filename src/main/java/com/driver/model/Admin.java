@@ -29,4 +29,12 @@ public class Admin {
 
     @Column(nullable = false, unique = true)
     String password;
+
+    @OneToMany
+    Driver driver;
+
+    @OneToMany
+    Cab cab;
+
+
 }

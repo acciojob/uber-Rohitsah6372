@@ -28,5 +28,10 @@ public class TripBooking {
     @OneToOne
     Cab cab;
 
+    @ManyToOne
+    @JoinColumn
+    Driver driver;
+
+
 
 }

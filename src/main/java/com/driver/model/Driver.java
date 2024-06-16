@@ -26,4 +26,7 @@ public class Driver {
     @OneToOne
     Cab cab;
 
+    @OneToMany
+    TripBooking tripBooking;
+
 }

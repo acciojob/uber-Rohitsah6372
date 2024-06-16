@@ -16,7 +16,7 @@ import javax.persistence.*;
 public class Cab {
 
     @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
     String cabNumber;
@@ -31,6 +31,11 @@ public class Cab {
     Driver driver;
 
     @OneToOne
+    @JoinColumn
     TripBooking tripBooking;
+
+    @ManyToOne
+    @JoinColumn
+    Admin admin;
 
 }
