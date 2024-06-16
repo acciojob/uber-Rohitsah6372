@@ -4,10 +4,7 @@ package com.driver.model;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,5 +26,11 @@ public class Cab {
     int distKm;
 
     boolean avialable;
+
+    @OneToOne
+    Driver driver;
+
+    @OneToOne
+    TripBooking tripBooking;
 
 }

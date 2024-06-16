@@ -24,9 +24,13 @@ public class Driver {
 
     int number;
 
+
     Boolean avialable;
 
     @Column(nullable = false, unique = true)
     String email;
+
+    @OneToOne
+    Cab cab;
 
 }

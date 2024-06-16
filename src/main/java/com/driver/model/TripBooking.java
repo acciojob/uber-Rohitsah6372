@@ -4,10 +4,7 @@ package com.driver.model;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -20,9 +17,16 @@ public class TripBooking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    int tripBookingId;
 
+    String fromLocation;
+    String toLocation;
+    int distanceInKm;
 
     TripStatus tripStatus;
+
+    @OneToOne
+    Cab cab;
+
 
 }
